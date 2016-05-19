@@ -1,0 +1,32 @@
+//
+//  WYPrefixHeader.pch
+//  WYNew
+//
+//  Created by qianfeng on 16/1/20.
+//  Copyright © 2016年 cl. All rights reserved.
+//
+
+#ifndef WYPrefixHeader_pch
+#define WYPrefixHeader_pch
+#import "UIView+ECButton.h"
+#import "UIImage+WYExtension.h"
+#import "UIBarButtonItem+Extension.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//知乎解析
+#define ZHIHU_NEWS_URL @"http://news-at.zhihu.com/api/4/stories/latest"
+//知乎更多时间在变
+#define ZHIHU_NEWS_MORE @"http://news-at.zhihu.com/api/4/stories/"
+//#define ZHIHU_NEWS_MORE @"http://news-at.zhihu.com/api/4/stories/before/20160106?client=0"
+//movie详情页解析  id会改变 其余不变
+// http://doukantv.com/api/program/?id=108684&cli=iphone&sys_ver=8.2&ver=2.3.4
+// 颜色
+#define WYCOLOR(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define WYColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+// 随机色
+#define WYRandomColor WYColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#endif /* WYPrefixHeader_pch */
